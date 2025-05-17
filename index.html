@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Bull - Gives You Wiiings</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <!-- Left: Hamburger + Logo -->
+      <div class="header-left">
+        <img src="assets/hamburger-icon.png" class="hamburger" alt="Menu" />
+        <div class="logo">
+          <img src="assets/logo.png" alt="Red Bull Logo" />
+          <span class="redbull-text">Red Bull</span>
+        </div>
+      </div>
+
+      <!-- Center: NavBar -->
+      <nav class="navbar">
+        <a href="#">Energy Drinks</a>
+        <a href="#">Events</a>
+        <a href="#">Athletes</a>
+        <a href="#">Red Bull TV</a>
+        <a
+          href="https://github.com/apoorvdarshan/redbull"
+          target="_blank"
+          class="github-link"
+        >
+          <i class="fa-brands fa-github"></i> GitHub Code
+        </a>
+      </nav>
+
+      <!-- Right: Icons -->
+      <div class="header-right">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="sky">
+        <!-- Existing clouds -->
+        <img src="assets/cloud1.png" class="cloud cloud-1" alt="cloud" />
+        <img src="assets/cloud2.png" class="cloud cloud-2" alt="cloud" />
+        <img src="assets/cloud3.png" class="cloud cloud-3" alt="cloud" />
+        <img src="assets/cloud1.png" class="cloud cloud-4" alt="cloud" />
+        <img src="assets/cloud2.png" class="cloud cloud-5" alt="cloud" />
+        <img src="assets/cloud3.png" class="cloud cloud-6" alt="cloud" />
+        <img src="assets/cloud1.png" class="cloud cloud-7" alt="cloud" />
+
+        <!-- Flying character -->
+        <img
+          src="assets/cartoon4.png"
+          class="cloud flyer"
+          alt="Flying Bull Cartoon"
+        />
+      </div>
+
+      <div class="content">
+        <h1>On Track with <br /><span>Your Fitness Goals?</span></h1>
+        <p>
+          Everybody needs a little motivation. A can of
+          <strong>Red Bull</strong> is an excellent choice for an active
+          lifestyle and gives you wiiings to reach greater heights.
+        </p>
+      </div>
+
+      <div class="characters">
+        <!-- Flying cartoon (Left) -->
+        <img
+          src="assets/cartoon2.png"
+          class="character character-2"
+          alt="Flying Cartoon"
+        />
+
+        <!-- Running cartoon (Center) -->
+        <img
+          src="assets/cartoon1.png"
+          class="character character-1"
+          alt="Running Cartoon"
+        />
+
+        <!-- Driving cartoon (Right) -->
+        <img
+          src="assets/cartoon3.png"
+          class="character character-3"
+          alt="Driving Cartoon"
+        />
+      </div>
+
+      <div class="cityscape">
+        <img src="assets/city.png" alt="City Background" />
+      </div>
+    </section>
+
+    <audio id="bg-audio" src="assets/background.mp3" hidden></audio>
+
+    <script src="app.js"></script>
+  </body>
+</html>
