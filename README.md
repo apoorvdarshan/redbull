@@ -16,7 +16,7 @@ A creatively reimagined landing page inspired by the official Red Bull website, 
 - 🐣 Hidden **easter eggs** for viewers to discover!
 - 🚴‍♀️ Fitness-focused message with energetic theme
 - 📱 Responsive layout and fun interactions
-- 💡 Inspired by [Red Bull’s official website](https://www.redbull.com)
+- 💡 Inspired by [Red Bull’s official website](https://www.redbull.com/in-en/cartoons)
 
 ## 📸 Visual Comparison
 
