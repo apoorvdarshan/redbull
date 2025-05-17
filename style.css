@@ -1,0 +1,363 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #e6f0ff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* Header layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(6px); /* adds soft blur effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Left */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Hamburger */
+.hamburger {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: #f5f5f5;
+  border: 1.5px solid #bbb;
+  cursor: pointer;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.logo img {
+  height: 36px;
+}
+.redbull-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #d90000;
+  font-family: sans-serif;
+}
+
+/* Center Navbar */
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+  background: linear-gradient(to right, #d90429, #f9c80e, #277da1);
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* Header Right */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.2rem;
+}
+.header-right i {
+  cursor: pointer;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Match navbar hover: grey background, expand slightly */
+.header-right i:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* light grey */
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: linear-gradient(to top, #d6eaff 0%, #ffffff 100%);
+}
+
+/* Sky & Clouds */
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* move above city */
+}
+.cloud {
+  position: absolute;
+  width: 100px;
+  opacity: 0.9;
+  animation: floatClouds 40s linear infinite;
+}
+.cloud-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.cloud-2 {
+  top: 20%;
+  left: 60%;
+  animation-delay: 10s;
+}
+.cloud-3 {
+  top: 30%;
+  left: 30%;
+  animation-delay: 20s;
+}
+
+/* Base cloud style */
+.cloud {
+  position: absolute;
+  width: 100px;
+  opacity: 0.9;
+  animation: moveClouds linear infinite;
+  z-index: 1;
+}
+
+/* Individual clouds starting at different X offsets */
+.cloud-1 {
+  top: 10%;
+  transform: translateX(0vw); /* Starts from left */
+  animation-duration: 50s;
+}
+.cloud-2 {
+  top: 20%;
+  transform: translateX(30vw); /* Starts mid-screen */
+  animation-duration: 65s;
+}
+.cloud-3 {
+  top: 30%;
+  transform: translateX(60vw); /* Starts near right */
+  animation-duration: 80s;
+}
+.cloud-4 {
+  top: 15%;
+  transform: translateX(-40vw);
+  animation-duration: 60s;
+}
+
+.cloud-5 {
+  top: 25%;
+  transform: translateX(10vw);
+  animation-duration: 70s;
+}
+
+.cloud-6 {
+  top: 18%;
+  transform: translateX(50vw);
+  animation-duration: 85s;
+}
+
+.cloud-7 {
+  top: 12%;
+  transform: translateX(80vw);
+  animation-duration: 90s;
+}
+
+/* Continuous left-to-right loop */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-20vw);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+.flyer {
+  width: 120px; /* previously 160px or 140px */
+  position: absolute;
+  top: 25%;
+  left: -160px;
+  z-index: 3;
+  animation: sineFlyY 20s linear infinite, flyRight 20s linear infinite;
+}
+
+/* Horizontal motion */
+@keyframes flyRight {
+  0% {
+    left: -160px;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+/* Smooth sine-like vertical motion */
+@keyframes sineFlyY {
+  0% {
+    transform: translateY(0vh);
+  }
+  10% {
+    transform: translateY(2vh);
+  }
+  20% {
+    transform: translateY(-2vh);
+  }
+  30% {
+    transform: translateY(2vh);
+  }
+  40% {
+    transform: translateY(-2vh);
+  }
+  50% {
+    transform: translateY(2vh);
+  }
+  60% {
+    transform: translateY(-2vh);
+  }
+  70% {
+    transform: translateY(2vh);
+  }
+  80% {
+    transform: translateY(-2vh);
+  }
+  90% {
+    transform: translateY(2vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+/* Content */
+.content {
+  text-align: center;
+  padding-top: 2.5rem; /* was likely higher, now less to move it up */
+  position: relative;
+  z-index: 4;
+}
+
+.content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #001f3f;
+}
+.content h1 span {
+  color: #003366;
+}
+.content p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Characters */
+.characters {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.character {
+  height: 270px; /* Increased size again */
+  object-fit: contain;
+  animation: bounce 4s infinite ease-in-out;
+}
+
+.character-1 {
+  height: 440px; /* previously 400px */
+  animation-delay: 1s;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.character-2 {
+  animation-delay: 0s;
+  margin-bottom: 20px; /* Moves up */
+}
+
+.character-3 {
+  animation-delay: 2s;
+  margin-bottom: 20px; /* Moves up */
+}
+
+/* Cityscape */
+.cityscape {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* keep it behind everything */
+}
+.cityscape img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo img,
+.redbull-text {
+  cursor: pointer;
+}
+
+.content {
+  cursor: default;
+}
+
+/* Special style for GitHub link in navbar */
+.github-link {
+  background-color: #24292e; /* GitHub dark grey */
+  color: #ffffff;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #444c56;
+  color: #ffffff;
+}
