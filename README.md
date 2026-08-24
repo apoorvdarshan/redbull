@@ -4,11 +4,11 @@ A creatively reimagined landing page inspired by the official Red Bull website, 
 
 ## 🔗 Live Preview
 
-🌐 [Live Site](https://redbull.aopv.dev)
+🌐 [Live Site](https://redbull.apoorvdarshan.com)
 
 ## 💻 GitHub Repository
 
-📂 [View Code](https://github.com/aopv/redbull)
+📂 [View Code](https://github.com/apoorvdarshan/redbull)
 
 ## ✨ Highlights
 
@@ -37,7 +37,7 @@ A creatively reimagined landing page inspired by the official Red Bull website, 
 
 ## 📬 Connect
 
-Created by [Apoorv Darshan](https://github.com/aopv)  
+Created by [Apoorv Darshan](https://github.com/apoorvdarshan)  
 Open to feedback, forks, and improvements!
 
 ---
